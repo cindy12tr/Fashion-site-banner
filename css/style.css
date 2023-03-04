@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+}
+li{
+    list-style: none;
+}
+.fa-solid{
+    cursor: pointer;
+}
+.hero{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+.left-col{
+    flex-basis: 30%;
+    background: rgb(89, 120, 73);
+    color: white;
+    position: relative;
+    
+}
+
+.fa{
+    color: white;
+    margin: 40px;
+    font-size: 40px;
+    opacity: 0.5;
+}
+.logo{
+    margin-left: 100px;
+    margin-top: -20px;
+    font-size: 30px;
+}
+.white-bar{
+    position: absolute;
+    height: 20px;
+    width: 280px;
+    background: #fff;
+    top: 180px;
+    right: 0;
+}
+
+.icons{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 130px;
+    font-size: 40px;
+    gap: 20px;
+    left: 150px;
+    opacity: 0.3;
+}
+.angle{
+    cursor: pointer;
+    border: 1px solid lightgray;
+    border-radius: 100%;
+    padding: 10px 20px;
+}
+.small-img{
+    position: absolute;
+    right: -90px;
+    bottom: 10px;
+    z-index: 4;
+    }
+    .small-pic{
+        width: 300px;
+        height: 360px;
+    }
+    .line-1{
+        width: 2px;
+        height: 80px;
+        position: absolute;
+        right: -40px;
+        bottom: 34px;
+        background: #333;
+        opacity: 0.8;
+    }
+    .line-1::after{
+        content: '02/05';
+        position: absolute;
+        top: -36px;
+        left: -19px;
+        font-size: 14px;
+        letter-spacing: 1px;
+        color: #333;
+        transform: rotate(-90deg);
+    }
+    .vertical-menu{
+        position: absolute;
+        bottom: 220px;
+        left: -150px;
+        transform: rotate(-90deg);
+    }
+    .vertical-menu ul li{
+        display: inline-block;
+        margin: 0 15px;
+        font-size: 15px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        opacity: 0.7;
+    }
+    
+/*right col*/
+.right-col{
+    flex-basis: 70%;
+    background: whitesmoke;
+    position: relative;
+}
+.navbar{
+    position: absolute;
+    right: 45px;
+    top: 85px;
+    display: flex;
+    align-items: center;
+}
+.navbar li{
+    list-style: none;
+    margin: 0 40px;
+    font-size: 15px;
+    display: inline-flex;
+    cursor: pointer;
+    font-weight: 500;
+    color: #333;
+}
+.search{
+    width: 25px;
+}
+.shop-icon{
+    color: rgb(89, 120, 73);
+    font-size: 30px;
+    opacity: 0.9;
+}
+.red-bar{
+    position: absolute;
+    height: 20px;
+    width: 280px;
+    background: rgb(89, 120, 73);
+    top: 180px;
+    left: 0;
+}
+.quote-text{
+    position: absolute;
+    top: 200px;
+    right: 55px;
+    width: 300px;
+}
+.quote-text p{
+    font-size: 30px;
+}
+.quote{
+    font-size: 50px;
+    opacity: 0.5;
+}
+.close{
+    margin-left: 130px;
+}
+.feature-img{
+    position: absolute;
+    top: 180px;
+    right: 50px;
+}
+.featured-img{
+    width: 400px;
+    height: 450px;
+}
+.menu-bar{
+    position: absolute;
+    top: -30px;
+    right: 0;
+    font-size: 20px;
+    color: #333;
+    
+}
+.bottom-line{
+    height: 7px;
+    width: 100px;
+    background: rgb(48, 78, 24);
+    opacity: 0.4;
+    position: absolute;
+    bottom: -60px;
+    right: 0;
+}
+.bottom-line span{
+    height: 7px;
+    width: 50px;
+    background: rgb(48, 78, 24);
+    position: absolute;
+    top: 0;
+    right: 110px;
+}
+.bottom-line span span{
+    height: 7px;
+    width: 25px;
+    background: rgb(48, 78, 24);
+    position: absolute;
+    top: 0;
+    right: 60px;
+}
+.feature-img h1{
+    position: absolute;
+    top: 41%;
+    right: 52%;
+    font-size: 85px;
+    font-weight: 300;
+    color: rgb(48, 78, 24);
+    opacity: 0.4;
+    transform: rotate(-90deg);
+
+}
+.text-box{
+    position: absolute;
+    top: 14%;
+    left: -125%;
+    width: 400px;
+}
+.text-box h2{
+    font-size: 62px;
+    font-weight: 100;
+    line-height: 60px;
+    opacity: 0.9;
+}
+.text-box p{
+    font-size: 18px;
+    margin-top: 15px;
+    color: #555;
+    letter-spacing: 1px;
+    line-height: 22px;
+}
+.angle-2{
+    position: absolute;
+    right: 50px;
+    bottom: -70px;
+    font-size: 30px;
+    color: black;
+    opacity: 0.9;
+}
+.icon-box{
+    font-size: 25px;
+    position: absolute;
+    right: -40px;
+    bottom: 120px;
+    text-align: center;
+    opacity: 0.8;
+    
+}
+.social-icons{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 20px;   
+}
+
