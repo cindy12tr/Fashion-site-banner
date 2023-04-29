@@ -10,9 +10,13 @@
 </head>
 <body>
     <div class="hero">
-        <div class="left-col">
-            <i class="fa fa-solid fa-bars"></i>
-            <div class="logo">Thinker</div>
+        
+        <div class="left-col" id="leftCol">
+            <div class="logo">LOGO</div>
+            <div id="openBtn" onclick="openNav()">
+                <i class="fa fa-solid fa-bars"></i>
+            </div>
+            
             <div class="white-bar"></div>
             <div class="quote-text">
                 <i class="quote fa-solid fa-quote-left"></i>
@@ -21,11 +25,20 @@
             </div>
             
                 <div class="icons">
-                    <i class="angle fa-solid fa-angle-up"></i>
-                    <i class="angle fa-solid fa-angle-down"></i>
+                    <a onclick="plusSlides(-1)"><i class="angle fa-solid fa-angle-up"></i></a>
+                    <a onclick="plusSlides(1)"><i class="angle fa-solid fa-angle-down"></i></a>
+                    
                 </div>
                 <div class="small-img">
-                    <img class="small-pic" src="images/pexels-vitória-santos-3050943.jpg" alt="">
+                    <div class="slides">
+                        <img class="small-pic active" src="images/pexels-vitória-santos-3050943.jpg" alt="">
+                    </div>
+                    <div class="slides">
+                        <img class="small-pic" src="images/pexels-murat-esibatir-4355702.jpg" alt="">
+                    </div>
+                    <div class="slides">
+                        <img class="small-pic" src="images/pexels-cole-keister-2466756.jpg" alt="">
+                    </div>
                     <div class="line-1"></div>
                 </div>
                 <div class="vertical-menu">
@@ -38,6 +51,7 @@
                 </div>
         </div>
         <div class="right-col">
+
             <div class="navbar">
                 <img src="images/search.png" class="search" alt="">
                 <ul>
@@ -48,6 +62,7 @@
                 </ul>
                 <i class="shop-icon fa-solid fa-bag-shopping"></i>
             </div>
+
             <div class="red-bar"></div>
             <div class="feature-img">
                 <i class="menu-bar fa-solid fa-bars-staggered"></i>
@@ -56,8 +71,8 @@
                 <h1>TRENDING</h1>
                 <div class="text-box">
                     <h2>Runway your own world</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque temporibus, aut soluta praesentium ipsam voluptas.</p>
-                    <i class="angle-2 fa-solid fa-angle-down"></i>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque temporibus, aut soluta praesentium ipsam voluptas <span id="dots">...</span> <span id="more">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, ex. Recusandae ex odit nobis magni accusantium iure natus eaque odio.</span> </p>
+                    <a id="readMe" onclick="readMe()"><i class="angle-2 fa-solid fa-angle-down"></i></a>
                 </div>
                 <div class="icon-box">
                     <div class="social-icons">
@@ -70,7 +85,42 @@
             </div>
         </div>
     </div>
+<script>
+    let slideIndex=1
+showSlides(slideIndex)
+function plusSlides(n){
+showSlides(slideIndex+=n)
+}
+function showSlides(n){
+    let i
+    let slides=document.getElementsByClassName('slides')
+    if(n>slides.length) {slideIndex=1}
+    if(n<1){slideIndex=slides.length}
+    for(i=0;i<slides.length;i++){
+        slides[i].style.display='none'
+    }
+    slides[slideIndex-1].style.display='block'
+}
 
+function readMe(){
+    const readMore=document.getElementsByClassName('angle-2')
+    const more=document.getElementById('more')
+    const dots=document.getElementById('dots')
+    if(dots.style.display==='none'){
+        more.style.display='none'
+        dots.style.display='inline'
+    }else{
+        more.style.display='inline'
+        dots.style.display='none'
+        readMore.style.transform='rotate(180deg)'
+    }
+}
+
+const leftCol =document.getElementById('leftCol')
+function openNav(){
+    leftCol.classList.toggle('toggle-btn')
+}
+</script>
     <script src="app.js"></script>
 </body>
 </html>

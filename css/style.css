@@ -5,6 +5,7 @@
 }
 body{
     font-family: sans-serif;
+    overflow-y: hidden;
 }
 li{
     list-style: none;
@@ -22,18 +23,20 @@ li{
     background: rgb(89, 120, 73);
     color: white;
     position: relative;
-    
 }
-
 .fa{
-    color: white;
+    color: black;
     margin: 40px;
-    font-size: 40px;
+    font-size: 20px;
     opacity: 0.5;
 }
+#openBtn{
+    display: none;
+}
+
 .logo{
     margin-left: 100px;
-    margin-top: -20px;
+    margin-top: 50px;
     font-size: 30px;
 }
 .white-bar{
@@ -41,7 +44,7 @@ li{
     height: 20px;
     width: 280px;
     background: #fff;
-    top: 180px;
+    top: 150px;
     right: 0;
 }
 
@@ -54,6 +57,11 @@ li{
     gap: 20px;
     left: 150px;
     opacity: 0.3;
+    transition: all 0.3 ease-in-out;
+}
+.icons a:hover{
+    transform: scale(1.1);
+    transition: all 0.3 ease-in-out;
 }
 .angle{
     cursor: pointer;
@@ -67,9 +75,18 @@ li{
     bottom: 10px;
     z-index: 4;
     }
+    .slides{
+        display: none;
+    }
+    
     .small-pic{
         width: 300px;
-        height: 360px;
+        height: 330px;
+        transition: all 0.5 ease-in-out;
+    }
+    .small-pic:hover{
+        transform: scale(1.1);
+        cursor: pointer;
     }
     .line-1{
         width: 2px;
@@ -100,9 +117,14 @@ li{
         display: inline-block;
         margin: 0 15px;
         font-size: 15px;
-        font-weight: 500;
+        font-weight: 300;
         letter-spacing: 1px;
         opacity: 0.7;
+        cursor: pointer;
+    }
+    .vertical-menu ul li:hover{
+        opacity: 1;
+        transform: scale(1.1);
     }
     
 /*right col*/
@@ -126,9 +148,14 @@ li{
     cursor: pointer;
     font-weight: 500;
     color: #333;
+    opacity: 0.8;
+}
+.navbar li:hover{
+    opacity: 1;
 }
 .search{
     width: 25px;
+    cursor: pointer;
 }
 .shop-icon{
     color: rgb(89, 120, 73);
@@ -146,7 +173,7 @@ li{
 .quote-text{
     position: absolute;
     top: 200px;
-    right: 55px;
+    left: 180px;
     width: 300px;
 }
 .quote-text p{
@@ -231,6 +258,7 @@ li{
     letter-spacing: 1px;
     line-height: 22px;
 }
+
 .angle-2{
     position: absolute;
     right: 50px;
@@ -238,6 +266,17 @@ li{
     font-size: 30px;
     color: black;
     opacity: 0.9;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+    
+}
+
+.angle-2:hover{
+    bottom: -80px;
+    transition: all 0.4s ease-in-out;
+}
+#more{
+    display: none;
 }
 .icon-box{
     font-size: 25px;
@@ -248,10 +287,173 @@ li{
     opacity: 0.8;
     
 }
-.social-icons{
+.social-icons {
     display: flex;
     flex-direction: column;
     gap: 50px;
     margin-bottom: 20px;   
 }
-
+.social-icons i:hover{
+    color: rgb(89, 120, 73);
+}
+@media screen and (max-width:1300px) {
+    .small-img{
+        right: -120px;
+    }
+    .small-pic{
+        width: 250px;
+        height: 230px;
+    }
+    .text-box{
+        left: -160%;
+    }
+    .text-box p{
+        margin-top: 10px;
+    }
+    .text-box h2{
+font-size: 40px;
+    }
+    .featured-img{
+        width: 300px;
+    }
+    .feature-img h1{
+        right: 40%;
+    }
+    .quote-text{
+        left: 93px;
+    }
+    .icons{
+        bottom: 70px;
+    }
+}
+@media screen and (max-width:1200px){
+    .text-box{
+        width: 350px;
+        left: -150%;
+    }
+    .text-box h2{
+        font-size: 30px;
+    }
+}
+@media screen and (max-width:800px){
+    .logo{
+        margin-left: 50px;
+    }
+    .white-bar{
+        width: 200px;
+    }
+    .red-bar{
+        width: 200px;
+    }
+    .vertical-menu{
+        bottom: 400px;
+        
+        
+    }
+    .vertical-menu ul li{
+        font-size: 12px;
+    }
+    .text-box{
+        display: none;
+    }
+    .icons{
+        left: 10px;
+    }
+    .feature-img{
+        top: 280px;
+    }
+    .quote-text{
+        left: 20px;
+    }
+    .quote-text p{
+        font-size: 25px;
+        width: 200px;
+    }
+    .quote{
+        font-size: 40px;
+    }
+    .navbar li{
+    margin: 0 10px;
+    }
+}
+@media screen and (max-width:400px){
+    #openBtn{
+        display: block;
+    }
+    .featured-img{
+        width: 200px;
+        height: 250px;
+    }
+    .left-col{
+        flex-basis: 0%;
+        transition: all 3s ;
+    }
+    .toggle-btn{
+        flex-basis: 100%;
+        transition: all 3s ;
+    }
+    .navbar{
+        top: 25px;
+        right: 80px;
+        gap: 60px;
+        
+    }
+    .navbar li{
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    }
+    .search{
+        display: none;
+    }
+    .shop-icon{
+        font-size: 25px;
+    }
+    .white-bar{
+        top: 80px;
+        width: 250px;
+    }
+    .red-bar{
+        top: 100px;
+        width: 200px;
+    }
+    .feature-img{
+        top: 170px;
+    }
+    .feature-img h1{
+        font-size: 60px;
+        right: 50%;
+    }
+    .bottom-line{
+        bottom: -30px;
+        width: 60px;
+    }
+    .bottom-line span{
+        right: 70px;
+    }
+    .quote-text{
+        top: 480px;
+        left: 150px;
+        color: rgb(48, 78, 24);
+        z-index: 3;
+    }
+    .logo{
+        font-size: 15px;
+        margin: 30px;
+    }
+    .small-img{
+    right: -80px;
+    }
+    .small-pic{
+        width: 150px;
+        height: 200px;
+    }
+    .icons{
+        font-size: 15px;
+        left: 60px;
+    }
+    .icon-box{
+        bottom: 10px;
+    }
+    
+}
